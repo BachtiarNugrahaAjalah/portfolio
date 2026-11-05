@@ -1,0 +1,44 @@
+name: Sync GitHub Pinned Repositories
+
+on:
+  schedule:
+    # Sinkronisasi berkala otomatis setiap hari Minggu pukul 00:00 UTC
+    - cron: '0 0 * * 0'
+  workflow_dispatch: # Mengizinkan eksekusi manual via tombol "Run workflow" di GitHub Actions
+  push:
+    paths:
+      - 'scripts/sync-pinned-repos.py'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run Pinned Repositories Sync
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/sync-pinned-repos.py
+
+      - name: Commit & Push If Changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain data/projects.json)" ]; then
+            git add data/projects.json
+            git commit -m "chore(telemetry): auto-sync pinned repos from GitHub [skip ci]"
+            git push
+          else
+            echo "No changes in pinned repositories detected."
+          fi
+
