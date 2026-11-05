@@ -1,4 +1,4 @@
-// main.js - Skrip Interaktif Portofolio Bachtiar Nugraha
+// main.js - Skrip Interaktif Portfolio Bachtiar Nugraha
 // Fitur: Monochrome Pure Theme Toggle, Calm Grid-Aligned Canvas,
 //        Scroll Reveal "Tersusun dari Acak" (Scattered Assembly & Cipher Decode),
 //        Protected Hover Scramble (Icon-Preserving), Typewriter, dan Copy Utility.
@@ -999,7 +999,7 @@
       timeGreeting = 'Selamat malam';
     }
 
-    greetingTextEl.textContent = `Halo, ${timeGreeting.toLowerCase()}! Senang Anda mampir ke portofolio saya. Semoga harimu menyenangkan dan mari terhubung untuk berkolaborasi.`;
+    greetingTextEl.textContent = `Halo, ${timeGreeting.toLowerCase()}! Senang Anda mampir ke portfolio saya. Semoga harimu menyenangkan dan mari terhubung untuk berkolaborasi.`;
   }
 
   updateGreetingMessage();
