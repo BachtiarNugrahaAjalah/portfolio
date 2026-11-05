@@ -1,0 +1,37 @@
+{
+  "pengalaman": [
+    {
+      "id": "exp-1",
+      "jabatan": "Asisten Dosen Praktikum",
+      "periode": "2025 - Sekarang",
+      "tempat": "Jurusan Ilmu Komputer \u00b7 FMIPA, Universitas Lampung",
+      "deskripsi": "Mengajar dan mendampingi praktikum mahasiswa di laboratorium komputer untuk beberapa mata kuliah komputasi, membantu pemahaman konsep algoritma dasar, serta mendukung pengerjaan proyek akademik dosen."
+    },
+    {
+      "id": "exp-2",
+      "jabatan": "Anggota Human Resource Development",
+      "periode": "2025",
+      "tempat": "UKM Gradien (Gerakan Digital Ekosistem Nasional) \u00b7 Unila",
+      "deskripsi": "Menjalankan program kerja pengembangan kapasitas sumber daya mahasiswa dan berpartisipasi aktif dalam membangun ekosistem kegiatan digital di lingkungan kampus Universitas Lampung."
+    }
+  ],
+  "pendidikan": [
+    {
+      "id": "edu-1",
+      "jenjang": "S1 Ilmu Komputer",
+      "periode": "2024 - Sekarang",
+      "tempat": "FMIPA \u00b7 Universitas Lampung",
+      "deskripsi": "Mahasiswa aktif yang mendalami fondasi ilmu komputasi, rekayasa perangkat lunak, dan kecerdasan buatan, sekaligus menjadi asisten dosen pengampu praktikum laboratorium.",
+      "prestasi": "IPK 3,91 / 4,00"
+    },
+    {
+      "id": "edu-2",
+      "jenjang": "SMA Negeri 3 Metro",
+      "periode": "2021 - 2024",
+      "tempat": "Jurusan IPA \u00b7 Kota Metro, Lampung",
+      "deskripsi": "Memulai ketertarikan di bidang teknologi informasi dan logika pemrograman melalui pembinaan serta seleksi olimpiade informatika tingkat sekolah dan daerah.",
+      "prestasi": null
+    }
+  ]
+}
+

@@ -1,0 +1,37 @@
+{
+  "galeri": [
+    {
+      "id": "design-01",
+      "judul": "Core Design System & UI Architecture",
+      "kategori": "UI/UX Design",
+      "tahun": "2025",
+      "deskripsi": "Perancangan fondasi sistem desain monokrom presisi, meliputi skala tipografi atomik, token warna, hierarki komponen interaktif, dan aturan layout responsif.",
+      "file": "design-system-core.webp",
+      "platform": "Figma",
+      "platform_url": "https://www.figma.com/@bachtiarnugraha",
+      "tags": ["Figma", "Design System", "Tokens", "WCAG AA"]
+    },
+    {
+      "id": "design-02",
+      "judul": "RoadResQ Mobile Emergency Interface",
+      "kategori": "Mobile UI",
+      "tahun": "2025",
+      "deskripsi": "Konsep antarmuka aplikasi seluler untuk pelaporan dan koordinasi darurat jalan raya, fokus pada kontras tinggi, keterbacaan instan, dan alur panggilan bantuan cepat.",
+      "file": "mobile-app-roadresq.webp",
+      "platform": "Figma",
+      "platform_url": "https://www.figma.com/@bachtiarnugraha",
+      "tags": ["Figma", "Mobile UI", "Prototyping", "UX Research"]
+    },
+    {
+      "id": "design-03",
+      "judul": "Gradien Community Brand Identity",
+      "kategori": "Brand Identity",
+      "tahun": "2025",
+      "deskripsi": "Eksplorasi identitas visual, perancangan logo vektor, dan standarisasi aset digital untuk komunitas pengembang ekosistem digital kampus.",
+      "file": "brand-identity-gradien.webp",
+      "platform": null,
+      "platform_url": null,
+      "tags": ["Vector Art", "Brand Guidelines", "Visual Assets"]
+    }
+  ]
+}

@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#09090b">
+    <meta
+      name="description"
+      content="Portofolio resmi Bachtiar Nugraha, mahasiswa S1 Ilmu Komputer Universitas Lampung. Fokus pada pengembangan perangkat lunak, algoritma pemecahan masalah, dan kecerdasan buatan."
+    >
+    <title>Bachtiar Nugraha &middot; Software Developer &amp; Computer Science Student</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%2309090b'/><text x='16' y='21' font-family='sans-serif' font-size='13' font-weight='bold' fill='%23fafafa' text-anchor='middle'>BN</text></svg>">
+    
+    <!-- Google Fonts Preconnect & Futuristic Sans-Serif (Space Grotesk + JetBrains Mono) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Ambient Futuristic Canvas Background Animation -->
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+
+    <!-- Minimalist Monochrome Header with Neon Scan Beam -->
+    <header class="site-header" id="header">
+      <div class="header-inner page-container">
+        <a class="brand-title" href="#profil" aria-label="Bachtiar Nugraha, kembali ke atas">
+          <span class="brand-name scramble-hover">bachtiar</span><span class="brand-dot">.dev</span>
+        </a>
+
+        <nav class="site-nav" id="site-nav" aria-label="Navigasi utama">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="#tentang">Tentang</a></li>
+            <li><a class="nav-link" href="#tech">Tech</a></li>
+            <li><a class="nav-link" href="#proyek">Proyek</a></li>
+            <li><a class="nav-link" href="#galeri">Galeri</a></li>
+            <li><a class="nav-link" href="#pengalaman-pendidikan">Riwayat</a></li>
+            <li><a class="nav-link" href="#kontak">Kontak</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-controls">
+          <!-- Theme Toggle (Dark / Light Monochrome) -->
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Ganti mode tampilan">
+            <svg id="theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg id="theme-icon-moon" aria-hidden="true" style="display: none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <button id="motion-toggle" class="motion-toggle" type="button" aria-label="Jeda animasi" aria-pressed="false" title="Jeda animasi latar dan efek bergerak">
+            <svg class="motion-pause-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line x1="8" y1="5" x2="8" y2="19"></line>
+              <line x1="16" y1="5" x2="16" y2="19"></line>
+            </svg>
+            <svg class="motion-play-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="7 4 20 12 7 20 7 4"></polygon>
+            </svg>
+          </button>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="site-nav">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="konten" class="main-content">
+      <!-- Hero Section (Wide Two-Column HUD & Telemetry) -->
+      <section class="hero-section page-container" id="profil" aria-labelledby="hero-name">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-status-pill">
+              <span class="status-dot-pulse" aria-hidden="true">
+                <span class="status-ping"></span>
+                <span class="status-dot"></span>
+              </span>
+              <span class="scramble-hover">STATUS // TERSEDIA</span>
+            </div>
+
+            <h1 class="hero-title" id="hero-name">Bachtiar Nugraha</h1>
+
+            <!-- Subtitle with Typewriter Animation -->
+            <div class="hero-typewriter" aria-live="polite">
+              <span id="typewriter-text">Mahasiswa S1 Ilmu Komputer</span>
+              <span class="typewriter-cursor" aria-hidden="true">_</span>
+            </div>
+
+            <p class="hero-quote">
+              "Mahasiswa biasa yang selalu berusaha menyempurnakan setiap baris kode, arsitektur sistem, dan logika komputasi."
+            </p>
+
+            <p class="hero-desc">
+              Berbasis di Bandar Lampung, Indonesia. Tertarik mendalam pada rekayasa perangkat lunak, perancangan sistem web, analisis algoritma matematis, serta penerapan machine learning. Saat ini aktif mendampingi praktikum mahasiswa sebagai asisten dosen di Universitas Lampung.
+            </p>
+
+            <div class="hero-contact-bar" role="group" aria-label="Tautan kontak cepat dan profil">
+              <a href="mailto:bachtiar.nugraha.245@gmail.com" class="contact-pill primary">
+                <span class="pill-label scramble-hover">Kirim Email</span>
+              </a>
+              <button type="button" id="copy-email-hero" class="contact-pill" data-copy="bachtiar.nugraha.245@gmail.com">
+                <span class="pill-label">Salin Email</span>
+              </button>
+              <a href="https://github.com/BachtiarNugrahaAjalah" target="_blank" rel="noopener noreferrer" class="contact-pill" aria-label="GitHub Bachtiar Nugraha">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span class="pill-label scramble-hover">GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/bachtiar-nugraha-b98b573a4/" target="_blank" rel="noopener noreferrer" class="contact-pill" aria-label="LinkedIn Bachtiar Nugraha">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span class="pill-label scramble-hover">LinkedIn</span>
+              </a>
+              <a href="https://wa.me/6285175080203" target="_blank" rel="noopener noreferrer" class="contact-pill" aria-label="WhatsApp Bachtiar Nugraha">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                <span class="pill-label scramble-hover">WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: HUD Telemetry Frame & Portrait -->
+          <div class="hero-telemetry-hud">
+            <div class="hud-frame">
+              <span class="hud-corner hud-tl" aria-hidden="true">+</span>
+              <span class="hud-corner hud-tr" aria-hidden="true">+</span>
+              <span class="hud-corner hud-bl" aria-hidden="true">+</span>
+              <span class="hud-corner hud-br" aria-hidden="true">+</span>
+
+              <div class="hud-image-wrapper">
+                <img
+                  src="images/bachtiar.webp"
+                  alt="Potret Bachtiar Nugraha"
+                  width="1600"
+                  height="1600"
+                  fetchpriority="high"
+                  decoding="async"
+                >
+              </div>
+
+              <!-- Lower Section: Specs Table (Default) & Greeting Panel (Overlays on Hover) -->
+              <div class="hud-info-container">
+                <div class="hud-specs-table">
+                  <div class="hud-spec-row">
+                    <span class="hud-spec-key">LOC //</span>
+                    <span class="hud-spec-val">Bandar Lampung, ID</span>
+                  </div>
+                  <div class="hud-spec-row">
+                    <span class="hud-spec-key">UNIV //</span>
+                    <span class="hud-spec-val">Universitas Lampung</span>
+                  </div>
+                  <div class="hud-spec-row">
+                    <span class="hud-spec-key">DEPT //</span>
+                    <span class="hud-spec-val">S1 Ilmu Komputer ('24)</span>
+                  </div>
+                  <div class="hud-spec-row">
+                    <span class="hud-spec-key">GPA //</span>
+                    <span class="hud-spec-val">3.91 / 4.00</span>
+                  </div>
+                  <div class="hud-spec-row">
+                    <span class="hud-spec-key">ROLE //</span>
+                    <span class="hud-spec-val">Asisten Dosen Praktikum</span>
+                  </div>
+                </div>
+
+                <!-- Greeting Panel: Menimpa informasi spesifikasi tepat di bawah foto saat dihover -->
+                <div class="hud-greeting-panel" aria-live="polite">
+                  <div class="greeting-panel-header">
+                    <span class="greeting-panel-badge">// INCOMING MESSAGE //</span>
+                    <span class="greeting-panel-status">
+                      <span class="greeting-status-dot" aria-hidden="true"></span>
+                      <span>ONLINE</span>
+                    </span>
+                  </div>
+                  <p class="greeting-panel-text" id="hud-greeting-text">
+                    Halo! Senang Anda mampir ke portofolio saya. Semoga harimu menyenangkan dan mari terhubung untuk berkolaborasi.
+                  </p>
+                  <div class="greeting-panel-footer">
+                    <span>BACHTIAR NUGRAHA &middot; UNILA</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Neon Divider -->
+      <div class="neon-divider" aria-hidden="true"></div>
+
+      <!-- Section: Tentang (About) -->
+      <section class="content-section section-alt page-container" id="tentang" aria-labelledby="tentang-label">
+        <span class="section-label scramble-hover" id="tentang-label">// TENTANG</span>
+        <h2 class="section-heading">Latar Belakang</h2>
+        <p class="section-text typewrite-on-scroll">
+          Berawal dari olimpiade informatika di bangku SMA, saya mendalami ilmu komputasi di Universitas Lampung dengan fokus pada rekayasa perangkat lunak, analisis algoritma, dan kecerdasan buatan, serta aktif sebagai asisten dosen praktikum.
+        </p>
+      </section>
+
+      <!-- Neon Divider -->
+      <div class="neon-divider" aria-hidden="true"></div>
+
+      <!-- Section: Tech Stack (Wide 2-Column Grid with Hover Transforms) -->
+      <section class="content-section page-container" id="tech" aria-labelledby="tech-label">
+        <span class="section-label scramble-hover" id="tech-label">// TECH STACK</span>
+        <h2 class="section-heading">Tech Stack</h2>
+        <p class="section-text typewrite-on-scroll">
+          Bahasa pemrograman, teknologi web, dan perkakas komputasi yang saya gunakan dalam pengembangan perangkat lunak.
+        </p>
+
+        <div class="tech-groups-grid">
+          <!-- Group 1: Languages -->
+          <div class="tech-group-item">
+            <span class="tech-group-title">// Bahasa Pemrograman</span>
+            <div class="tech-badges-list">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">C / C++</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">PHP</span>
+              <span class="tech-badge">SQL</span>
+            </div>
+          </div>
+
+          <!-- Group 2: Web & Frontend -->
+          <div class="tech-group-item">
+            <span class="tech-group-title">// Web &amp; Antarmuka</span>
+            <div class="tech-badges-list">
+              <span class="tech-badge">HTML5 Semantic</span>
+              <span class="tech-badge">Modern CSS3</span>
+              <span class="tech-badge">Responsive Design</span>
+              <span class="tech-badge">RESTful API</span>
+              <span class="tech-badge">DOM &amp; Web APIs</span>
+            </div>
+          </div>
+
+          <!-- Group 3: Tools & Workflow -->
+          <div class="tech-group-item">
+            <span class="tech-group-title">// Alat &amp; Lingkungan</span>
+            <div class="tech-badges-list">
+              <span class="tech-badge">Git</span>
+              <span class="tech-badge">GitHub</span>
+              <span class="tech-badge">VS Code</span>
+              <span class="tech-badge">Linux / WSL</span>
+              <span class="tech-badge">Postman</span>
+            </div>
+          </div>
+
+          <!-- Group 4: Core Specialization -->
+          <div class="tech-group-item">
+            <span class="tech-group-title">// Bidang Fokus</span>
+            <div class="tech-badges-list">
+              <span class="tech-badge">Algoritma &amp; Struktur Data</span>
+              <span class="tech-badge">Problem Solving</span>
+              <span class="tech-badge">Machine Learning</span>
+              <span class="tech-badge">UI/UX Design</span>
+              <span class="tech-badge">Video Editing</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Neon Divider -->
+      <div class="neon-divider" aria-hidden="true"></div>
+
+      <!-- Section: Proyek Pilihan (Expansive List with Hover Transforms) -->
+      <section class="content-section section-alt page-container" id="proyek" aria-labelledby="proyek-label">
+        <span class="section-label scramble-hover" id="proyek-label">// PROYEK</span>
+        <h2 class="section-heading">Proyek Pilihan</h2>
+
+        <!-- GitHub API Live Telemetry Indicator -->
+        <div class="project-sync-status" id="project-sync-status">
+          <span class="sync-status-indicator" aria-hidden="true">
+            <span class="sync-ping"></span>
+            <span class="sync-dot"></span>
+          </span>
+          <span class="sync-status-text" id="github-sync-label">
+            GITHUB // PINNED REPOS &middot; 4 REPOSITORI &middot; 0 BINTANG
+          </span>
+        </div>
+
+        <div class="project-list" id="project-list" aria-live="polite" aria-label="Daftar repositori pinned pilihan">
+          <!-- Diisi secara dinamis melalui main.js dari data/projects.json -->
+        </div>
+      </section>
+
+      <!-- Neon Divider -->
+      <div class="neon-divider" aria-hidden="true"></div>
+
+      <!-- Section: Galeri Desain Grafis -->
+      <section class="content-section page-container" id="galeri" aria-labelledby="galeri-label">
+        <span class="section-label scramble-hover" id="galeri-label">// GALERI</span>
+        <h2 class="section-heading">Desain Grafis</h2>
+        <p class="section-text typewrite-on-scroll">
+          Eksplorasi antarmuka pengguna (UI/UX), sistem desain, dan aset grafis digital format WebP.
+        </p>
+
+        <!-- Gallery Live Status Bar -->
+        <div class="gallery-telemetry-bar">
+          <span class="sync-status-indicator" aria-hidden="true">
+            <span class="sync-ping"></span>
+            <span class="sync-dot"></span>
+          </span>
+          <span class="gallery-telemetry-text" id="gallery-telemetry-label">
+            WEBP // FORMAT TEROPTIMASI
+          </span>
+        </div>
+
+        <!-- Dynamic Gallery Grid Container -->
+        <div class="gallery-grid" id="gallery-grid" aria-live="polite" aria-label="Daftar karya desain grafis">
+          <!-- Diisi secara dinamis melalui main.js dari data/gallery.json -->
+        </div>
+      </section>
+
+      <!-- Neon Divider -->
+      <div class="neon-divider" aria-hidden="true"></div>
+
+      <!-- Section: Pengalaman & Pendidikan (Side-by-Side Wide Grid with Hover Transforms) -->
+      <section class="content-section section-alt page-container" id="pengalaman-pendidikan" aria-labelledby="rekam-label">
+        <span class="section-label scramble-hover" id="rekam-label">// REKAM</span>
+        <h2 class="section-heading">Pengalaman &amp; Pendidikan</h2>
+
+        <div class="dual-stream-grid">
+          <!-- Experience Column: diisi oleh JS dari data/resume.json -->
+          <div>
+            <h3 class="stream-column-heading">// Pengalaman</h3>
+            <div class="resume-list" id="resume-experience-list" aria-live="polite" aria-label="Daftar pengalaman">
+              <!-- konten dimuat via JS -->
+            </div>
+          </div>
+
+          <!-- Education Column: diisi oleh JS dari data/resume.json -->
+          <div>
+            <h3 class="stream-column-heading">// Pendidikan</h3>
+            <div class="resume-list" id="resume-education-list" aria-live="polite" aria-label="Daftar pendidikan">
+              <!-- konten dimuat via JS -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Neon Divider -->
+      <div class="neon-divider" aria-hidden="true"></div>
+
+      <!-- Section: Kontak -->
+      <section class="content-section contact-section page-container" id="kontak" aria-labelledby="kontak-label">
+        <span class="section-label scramble-hover" id="kontak-label">// KONTAK</span>
+        <h2 class="section-heading">Kontak</h2>
+        <p class="section-text typewrite-on-scroll">
+          Terbuka untuk kolaborasi riset, rekayasa perangkat lunak, maupun diskusi seputar teknologi dan komputasi.
+        </p>
+
+        <div class="contact-options" role="group" aria-label="Opsi menghubungi Bachtiar Nugraha">
+          <a href="mailto:bachtiar.nugraha.245@gmail.com?subject=Halo%20Bachtiar%20-%20Diskusi%20atau%20Kolaborasi" class="contact-pill primary">
+            <span class="pill-label scramble-hover">Kirim Email Langsung</span>
+          </a>
+          <button type="button" id="copy-email-contact" class="contact-pill" data-copy="bachtiar.nugraha.245@gmail.com">
+            <span class="pill-label">Salin Alamat Email</span>
+          </button>
+          <a href="https://wa.me/6285175080203" target="_blank" rel="noopener noreferrer" class="contact-pill">
+            <span class="pill-label scramble-hover">Chat via WhatsApp</span>
+          </a>
+          <a href="https://www.linkedin.com/in/bachtiar-nugraha-b98b573a4/" target="_blank" rel="noopener noreferrer" class="contact-pill">
+            <span class="pill-label scramble-hover">LinkedIn</span>
+          </a>
+          <a href="https://github.com/BachtiarNugrahaAjalah" target="_blank" rel="noopener noreferrer" class="contact-pill">
+            <span class="pill-label scramble-hover">GitHub</span>
+          </a>
+          <a href="https://www.instagram.com/bachtiaarrr._" target="_blank" rel="noopener noreferrer" class="contact-pill" aria-label="Instagram Bachtiar Nugraha">
+            <span class="pill-label scramble-hover">Instagram</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Floating Futuristic HUD Scroll Telemetry (Replaces Traditional Scrollbar) -->
+    <aside class="hud-scroll-telemetry" id="hud-scroll-telemetry" aria-label="Indikator dan navigasi posisi scroll">
+      <div class="telemetry-rail" id="telemetry-rail">
+        <div class="telemetry-reticle" id="telemetry-reticle" aria-hidden="true">
+          <span class="reticle-crosshair">+</span>
+        </div>
+
+        <nav class="telemetry-nodes" aria-label="Navigasi cepat section">
+          <a href="#profil" class="telemetry-node active" data-section="profil" aria-label="Navigasi ke Profil">
+            <span class="node-tick" aria-hidden="true">&middot;</span>
+            <span class="node-tag">01 // PROFIL</span>
+          </a>
+          <a href="#tentang" class="telemetry-node" data-section="tentang" aria-label="Navigasi ke Tentang">
+            <span class="node-tick" aria-hidden="true">&middot;</span>
+            <span class="node-tag">02 // TENTANG</span>
+          </a>
+          <a href="#tech" class="telemetry-node" data-section="tech" aria-label="Navigasi ke Tech Stack">
+            <span class="node-tick" aria-hidden="true">&middot;</span>
+            <span class="node-tag">03 // TECH</span>
+          </a>
+          <a href="#proyek" class="telemetry-node" data-section="proyek" aria-label="Navigasi ke Proyek">
+            <span class="node-tick" aria-hidden="true">&middot;</span>
+            <span class="node-tag">04 // PROYEK</span>
+          </a>
+          <a href="#galeri" class="telemetry-node" data-section="galeri" aria-label="Navigasi ke Galeri">
+            <span class="node-tick" aria-hidden="true">&middot;</span>
+            <span class="node-tag">05 // GALERI</span>
+          </a>
+          <a href="#pengalaman-pendidikan" class="telemetry-node" data-section="pengalaman-pendidikan" aria-label="Navigasi ke Riwayat">
+            <span class="node-tick" aria-hidden="true">&middot;</span>
+            <span class="node-tag">06 // REKAM</span>
+          </a>
+          <a href="#kontak" class="telemetry-node" data-section="kontak" aria-label="Navigasi ke Kontak">
+            <span class="node-tick" aria-hidden="true">&middot;</span>
+            <span class="node-tag">07 // KONTAK</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="telemetry-readout" aria-hidden="true">
+        <span class="readout-label"></span>
+        <span class="readout-val" id="telemetry-readout-val">000%</span>
+      </div>
+    </aside>
+
+    <!-- Floating HUD CV Download Button (Placeholder Berstatus Segera Hadir) -->
+    <div class="floating-cv-container" id="floating-cv-container">
+      <div class="floating-cv-toast" id="floating-cv-toast" role="status" aria-live="polite">
+        <span class="toast-indicator" aria-hidden="true">&bull;</span>
+        <span class="toast-text" id="floating-cv-toast-text">Dokumen CV sedang dalam penyusunan akhir. Segera hadir!</span>
+      </div>
+
+      <button
+        type="button"
+        id="floating-cv-btn"
+        class="floating-cv-btn"
+        aria-label="Unduh CV Bachtiar Nugraha (Format PDF, Segera Hadir)"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <span class="cv-btn-corner cv-corner-tl" aria-hidden="true">+</span>
+        <span class="cv-btn-corner cv-corner-br" aria-hidden="true">+</span>
+
+        <span class="cv-btn-icon-wrapper" aria-hidden="true">
+          <svg class="cv-btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="12" y1="18" x2="12" y2="12"></line>
+            <polyline points="9 15 12 18 15 15"></polyline>
+          </svg>
+        </span>
+
+        <span class="cv-btn-content">
+          <span class="cv-btn-title">CV.PDF</span>
+          <span class="cv-btn-status" id="cv-btn-status">[ SEGERA ]</span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Modal Lightbox Preview Gambar Galeri (Aksesibel & Monokrom) -->
+    <div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau detail karya desain" hidden>
+      <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+      <div class="lightbox-dialog" role="document">
+        <div class="lightbox-header">
+          <div class="lightbox-title-wrap">
+            <span class="lightbox-badge" id="lightbox-badge">// DESAIN GRAFIS</span>
+            <h3 class="lightbox-title" id="lightbox-title">Judul Desain</h3>
+          </div>
+          <button type="button" class="lightbox-close-btn" id="lightbox-close-btn" aria-label="Tutup pratinjau desain">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="lightbox-body">
+          <img src="assets/gallery/webp/design-system-core.webp" alt="Pratinjau detail desain" id="lightbox-img" class="lightbox-img" width="1200" height="750" loading="lazy">
+        </div>
+        <div class="lightbox-footer">
+          <p class="lightbox-desc" id="lightbox-desc"></p>
+          <div class="lightbox-actions" id="lightbox-actions"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Minimalist Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner page-container">
+        <div class="footer-brand-wrap">
+          <p class="footer-copy">
+            &copy; 2026 Bachtiar Nugraha &middot; S1 Ilmu Komputer Universitas Lampung.
+          </p>
+          <div class="footer-social-links" role="navigation" aria-label="Daftar media sosial dan kontak di footer">
+            <a href="https://github.com/BachtiarNugrahaAjalah" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub Bachtiar Nugraha">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/bachtiar-nugraha-b98b573a4/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn Bachtiar Nugraha">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/bachtiaarrr._" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram Bachtiar Nugraha">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <span>Instagram</span>
+            </a>
+            <a href="https://wa.me/6285175080203" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="WhatsApp Bachtiar Nugraha">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+            <a href="mailto:bachtiar.nugraha.245@gmail.com" class="footer-social-link" aria-label="Email Bachtiar Nugraha">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+        <a href="#profil" class="back-to-top" aria-label="Kembali ke atas halaman">
+          Kembali ke atas &uarr;
+        </a>
+      </div>
+    </footer>
+
+    <!-- Interactive Script (Deferred for Performance R-40) -->
+    <script src="main.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+{
+  "updated_at": "2026-11-05T01:37:38.195347+00:00",
+  "github_username": "BachtiarNugrahaAjalah",
+  "total_pinned": 4,
+  "proyek": [
+    {
+      "id": "project-card-1",
+      "repo": "BachtiarNugrahaAjalah/Cardiovascular_Expert_System_UTS",
+      "judul": "Sistem Pakar Diagnosis Penyakit Kardiovaskular",
+      "url": "https://github.com/BachtiarNugrahaAjalah/Cardiovascular_Expert_System_UTS",
+      "kategori": "Sistem Pakar & Kesehatan",
+      "deskripsi": "Aplikasi web sistem pakar berbasis aturan (rule-based expert system) untuk membantu diagnosis awal potensi penyakit kardiovaskular, dikembangkan sebagai proyek UTS mata kuliah Kecerdasan Buatan.",
+      "bahasa": "HTML",
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Expert System",
+        "AI"
+      ],
+      "stars": 0,
+      "forks": 0
+    },
+    {
+      "id": "project-card-2",
+      "repo": "BachtiarNugrahaAjalah/Invencom",
+      "judul": "Invencom - Sistem Manajemen Inventaris",
+      "url": "https://github.com/BachtiarNugrahaAjalah/Invencom",
+      "kategori": "Mobile & Java",
+      "deskripsi": "Aplikasi manajemen inventaris berbasis Java yang dirancang untuk mempermudah pencatatan, pemantauan stok barang, dan pengelolaan data inventaris secara terstruktur dan efisien.",
+      "bahasa": "Java",
+      "tags": [
+        "Java",
+        "Android",
+        "Inventaris",
+        "Mobile Dev"
+      ],
+      "stars": 0,
+      "forks": 0
+    },
+    {
+      "id": "project-card-3",
+      "repo": "BachtiarNugrahaAjalah/RoadResQ",
+      "judul": "RoadResQ - Aplikasi Respons Darurat Jalan",
+      "url": "https://github.com/BachtiarNugrahaAjalah/RoadResQ",
+      "kategori": "Mobile & Kotlin",
+      "deskripsi": "Aplikasi mobile Android berbasis Kotlin untuk mempercepat respons darurat di jalan raya, menghubungkan pengguna yang membutuhkan bantuan dengan layanan terdekat secara real-time.",
+      "bahasa": "Kotlin",
+      "tags": [
+        "Kotlin",
+        "Android",
+        "Emergency Response",
+        "Mobile Dev"
+      ],
+      "stars": 0,
+      "forks": 0
+    },
+    {
+      "id": "project-card-4",
+      "repo": "BachtiarNugrahaAjalah/PROJECT-UAP-DDP",
+      "judul": "Modul & Algoritma Praktikum Pemrograman",
+      "url": "https://github.com/BachtiarNugrahaAjalah/PROJECT-UAP-DDP",
+      "kategori": "C++ & Komputasi",
+      "deskripsi": "Penyusunan modul latihan praktikum pemrograman terstruktur, asistensi pemecahan masalah algoritma di laboratorium komputer, dan evaluasi hasil kerja mahasiswa di Jurusan Ilmu Komputer Unila.",
+      "bahasa": "C++",
+      "tags": [
+        "C++",
+        "Ilmu Komputer Unila",
+        "Algoritma Pemrograman",
+        "GitHub Repository"
+      ],
+      "stars": 0,
+      "forks": 1
+    }
+  ]
+}
